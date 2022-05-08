@@ -15,10 +15,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { CongesComponent } from './conges/conges.component';
-import { LoginComponent } from './conges/login/login.component';
-import { HeaderComponent } from './header/header.component';
+import { LoginComponent } from './login/login.component';
 import {FormsModule} from "@angular/forms";
+import { DemandeComponent } from './demande/demande.component';
+import { PasswordFormComponent } from './password-form/password-form.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ConsultationComponent } from './consultation/consultation.component';
+import { SoldeComponent } from './solde/solde.component';
+import { UserComponent } from './user/user.component';
+import { CongeComponent } from './conge/conge.component';
 
 @NgModule({
   imports: [
@@ -32,15 +37,20 @@ import {FormsModule} from "@angular/forms";
     MatIconModule,
     MatDividerModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   declarations: [
     AppComponent,
     SidebarComponent,
     HomeComponent,
-    CongesComponent,
     LoginComponent,
-    HeaderComponent,
+    DemandeComponent,
+    PasswordFormComponent,
+    ConsultationComponent,
+    SoldeComponent,
+    UserComponent,
+    CongeComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

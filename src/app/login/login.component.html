@@ -1,0 +1,35 @@
+<div style="margin-top: 30%;">
+  <form #loginForm="ngForm">
+    email : <input
+    type="text"
+    class="form-control"
+    [ngModel]="user.username"
+    required
+    email
+    #emailInput="ngModel"
+    name="username"
+  > <br>
+    <div
+      *ngIf="emailInput.invalid && emailInput.touched"
+      class="alert alert-danger">
+      Veuillez renseigner un email valid
+    </div>
+    password : <input
+    type="password"
+    required
+    class="form-control"
+    [ngModel]="user.password"
+    minlength="4"
+    name="password"
+  >
+  </form> <br>
+  <button
+    [disabled]="loginForm.invalid"
+    (click)="login(loginForm)"
+    class="btn btn-primary">
+    Login
+  </button>
+  <div class="alert alert-danger" *ngIf="message.length">
+    {{message}}
+  </div>
+  </div>
